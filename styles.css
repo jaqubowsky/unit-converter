@@ -57,15 +57,21 @@ body {
 	font-size: 58px;
 	text-align: center;
 	font-weight: 800;
+	transition: all 1s;
+}
+
+#container #top-section .input-el:focus {
+	transform: scale(1.02);
+	background-color: #7757f8;
 }
 
 #container #top-section .input-el::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 
-#container #top-section .submit-el {
+#container #top-section .btn {
 	margin-top: 20px;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.9);
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -73,6 +79,12 @@ body {
 	height: 42px;
 	font-weight: 500;
 	font-size: 16px;
+	transition: all 1s;
+}
+
+#container #top-section .btn:hover {
+	transform: scale(1.03);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 #container #bottom-section {
@@ -91,7 +103,7 @@ body {
 	width: 500px;
 	height: 110px;
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -100,12 +112,12 @@ body {
 	color: #5a537b;
 	font-size: 20px;
 	font-weight: 600;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 #container #bottom-section p {
 	font-weight: 400;
-	font-size: 14px;
-  color: #353535;
-  text-align: center;
+	font-size: 16px;
+	color: #353535;
+	text-align: center;
 }
