@@ -1,8 +1,9 @@
 const lengthTextEl = document.querySelector(".length-text");
 const volumeTextEl = document.querySelector(".volume-text");
 const massTextEl = document.querySelector(".mass-text");
-const submitEl = document.querySelector(".submit-el");
+const submitBtn = document.querySelector(".submit-el");
 const inputEl = document.querySelector(".input-el");
+const resetBtn = document.querySelector(".reset-el");
 
 const meterToFeetRatio = 3.2808;
 const litersToGallonsRatio = 0.264;
@@ -16,20 +17,28 @@ function unitConversion(initialUnit, finalUnit, conversionType) {
 	).toFixed(3)} ${initialUnit}`;
 }
 
-submitEl.addEventListener("click", function () {
-	lengthTextEl.innerHTML = unitConversion(
-    "meters", 
-    "feet", 
-    meterToFeetRatio
-  );
-	volumeTextEl.innerHTML = unitConversion(
-		"liters",
-		"gallons",
-		litersToGallonsRatio
-	);
-	massTextEl.innerHTML = unitConversion(
-		"kilos",
-		"pounds",
-		kilogramsToPoundsRadio
-	);
+submitBtn.addEventListener("click", function () {
+	if (inputEl.value === "") {
+		inputEl.focus();
+	} else {
+		lengthTextEl.innerHTML = unitConversion("meters", "feet", meterToFeetRatio);
+		volumeTextEl.innerHTML = unitConversion(
+			"liters",
+			"gallons",
+			litersToGallonsRatio
+		);
+		massTextEl.innerHTML = unitConversion(
+			"kilos",
+			"pounds",
+			kilogramsToPoundsRadio
+		);
+	}
+});
+
+resetBtn.addEventListener("click", function () {
+	volumeTextEl.textContent = "";
+	lengthTextEl.textContent = "";
+	massTextEl.textContent = "";
+  inputEl.value = ""
+	inputEl.focus();
 });
