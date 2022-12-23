@@ -1,5 +1,74 @@
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+#container {
+	margin: 12vh auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#container #top-section {
+	background-color: #6943ff;
+}
+
+#container #top-section .text {
+	color: white;
+	font-weight: 800;
+}
+
+#container #top-section .form {
+	padding: 40px 40px 0 40px;
+}
+
+#container #top-section h1 {
+	font-size: 28px;
+}
+
+#container #top-section .form-el {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+#container #top-section .input-el {
+	background-color: #6943ff;
+	border: 2px #b295ff solid;
+	border-radius: 5px;
+	width: 117px;
+	height: 83px;
+	font-size: 58px;
+	text-align: center;
+	font-weight: 800;
+}
+
+#container #top-section .input-el::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+#container #top-section .submit-el {
+	margin: 20px 0;
+	background-color: white;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	width: 117px;
+	height: 42px;
+	font-weight: 500;
+	font-size: 16px;
 }
